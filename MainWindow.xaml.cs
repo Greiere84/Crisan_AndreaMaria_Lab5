@@ -30,10 +30,11 @@ namespace Crisan_AndreaMaria_Lab5
     }
     public partial class MainWindow : Window
     {
+        static string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["PhoneNumbers"].ConnectionString;
         ActionState action = ActionState.Nothing; 
         PhoneNumbersDataSet phoneNumbersDataSet = new PhoneNumbersDataSet(); 
         PhoneNumbersDataSetTableAdapters.PhoneNumbersTableAdapter 
-        tblPhoneNumbersAdapter = new PhoneNumbersDataSetTableAdapters.PhoneNumbersTableAdapter(); 
+            tblPhoneNumbersAdapter = new PhoneNumbersDataSetTableAdapters.PhoneNumbersTableAdapter(connectionString);
         Binding txtPhoneNumberBinding = new Binding(); 
         Binding txtSubscriberBinding = new Binding();
         Binding txtContractValueBinding = new Binding();

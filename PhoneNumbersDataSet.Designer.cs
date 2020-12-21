@@ -468,6 +468,7 @@ namespace Crisan_AndreaMaria_Lab5 {
                 this.columnPhonenum.MaxLength = 20;
                 this.columnSubscriber.AllowDBNull = false;
                 this.columnSubscriber.MaxLength = 20;
+                this.Locale = new global::System.Globalization.CultureInfo("en-UM");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
